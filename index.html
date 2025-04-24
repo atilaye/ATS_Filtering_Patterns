@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ATS Keyword Filtering Strategies</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Keyword Filtering in ATS Systems</h1>
+    <p>A quick comparison of how three types of Applicant Tracking Systems filter resumes</p>
+  </header>
+
+  <section class="container">
+    <div class="card">
+      <h2>Boolean-Based Filtering</h2>
+      <p>
+        Uses logic operators (AND, OR, NOT) to match keywords in resumes.
+      </p>
+      <button onclick="toggleExample('example1')">Show Example</button>
+      <div id="example1" class="example hidden">
+        <strong>Example:</strong><br />
+        Query: <code>("JavaScript" AND "React") OR ("Node.js") NOT ("Intern")</code><br />
+        Only resumes that mention JavaScript and React, or Node.js—but not Intern—will be included.
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>AI/NLP-Based Filtering</h2>
+      <p>
+        Uses Natural Language Processing to understand context, semantics, and synonyms.
+      </p>
+      <button onclick="toggleExample('example2')">Show Example</button>
+      <div id="example2" class="example hidden">
+        <strong>Example:</strong><br />
+        The system understands "Python developer" ≈ "experienced in scripting with Python".
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Rule-Based Filtering</h2>
+      <p>
+        Applies predefined rules to include/exclude resumes.
+      </p>
+      <button onclick="toggleExample('example3')">Show Example</button>
+      <div id="example3" class="example hidden">
+        <strong>Example:</strong><br />
+        Rule: Must include “SQL” AND “3+ years experience”<br />
+        If not exact, resume may be excluded.
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Ameya Tilaye
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
